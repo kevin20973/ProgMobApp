@@ -15,7 +15,7 @@
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/btn_1"
-                android:text="business"
+                android:text="Mundo"
                 android:textSize="12sp"
                 android:padding="6dp"
                 android:layout_margin="6dp"
@@ -25,7 +25,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_2"
-                android:text="entertainment"
+                android:text="Ultimas"
                 android:textSize="12sp"
                 android:padding="6dp"
                 android:layout_margin="6dp"
@@ -35,7 +35,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_3"
-                android:text="general"
+                android:text="Desporto"
                 android:textSize="12sp"
                 android:padding="6dp"
                 android:layout_margin="6dp"
@@ -45,7 +45,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_4"
-                android:text="health"
+                android:text="Politica"
                 android:textSize="12sp"
                 android:padding="6dp"
                 android:layout_margin="6dp"
@@ -55,27 +55,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_5"
-                android:text="science"
-                android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </Button>
-            <Button
-                android:id="@+id/btn_6"
-                android:text="sports"
-                android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </Button>
-            <Button
-                android:id="@+id/btn_7"
-                android:text="technology"
+                android:text="Economia"
                 android:textSize="12sp"
                 android:padding="6dp"
                 android:layout_margin="6dp"

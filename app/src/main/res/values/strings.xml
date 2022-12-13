@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Noticias</string>
     <string name="business">business</string>
     <string name="entertainment">entertainment</string>
     <string name="general">general</string>
