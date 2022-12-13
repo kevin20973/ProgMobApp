@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
                     Adapter = Adapter(baseContext, responseBody)
                     Adapter.notifyDataSetChanged()
+                    recycler_main.adapter = Adapter
 
             }
 
