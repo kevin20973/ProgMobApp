@@ -1,11 +1,13 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.util.Log.d
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,14 +18,19 @@ import retrofit2.converter.gson.GsonConverterFactory
 //variavel constante para o URL
 const val BASE_URL ="https://fa2097324277.azurewebsites.net/"
 
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var Adapter: Adapter
     lateinit var  linearLayoutManager: LinearLayoutManager
+    var searchView:androidx.appcompat.widget.SearchView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        searchView = findViewById<SearchView>(R.id.search_view)
+
 
         recycler_main.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(this)
@@ -57,6 +64,18 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<List<DataItem>?>, t: Throwable) {
                 d("MainActivity", "onFailure" + t.message)
             }
+
+
         })
+
     }
-}
+
+    }
+
+
+
+
+
+
+
+    

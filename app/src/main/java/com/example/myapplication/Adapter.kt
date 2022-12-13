@@ -31,6 +31,7 @@ class Adapter(val context: Context, val newsList: List<DataItem>): RecyclerView.
         holder.text_title.text = newsList[position].title
         holder.text_source.text = newsList[position].description
         Picasso.get().load(newsList[position].urlToImage).into(holder.img_headline)
+
     }
     override fun getItemCount(): Int {
         return newsList.size

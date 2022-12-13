@@ -11,7 +11,7 @@ interface API {
     fun getData(): Call<List<DataItem>>
 
     //gets news by category
-    @GET("api/getNewsByCategory")
+    @GET("api/getByCategory")
     fun getDataByCategory(
         @Query("categories") category:String
     ): Call<List<DataItem>>
