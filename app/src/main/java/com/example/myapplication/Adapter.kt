@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_items.view.*
 import org.w3c.dom.Text
 
@@ -13,12 +14,11 @@ class Adapter(val context: Context, val newsList: List<DataItem>): RecyclerView.
     class ViewHolder(newsView: View): RecyclerView.ViewHolder(newsView) {
         var text_title: TextView
         var text_source: TextView
-        init {
+       init {
             text_title = newsView.text_title
             text_source = newsView.text_source
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var newsView = LayoutInflater.from(context).inflate(R.layout.row_items, parent, false)
         return ViewHolder(newsView)
@@ -27,11 +27,8 @@ class Adapter(val context: Context, val newsList: List<DataItem>): RecyclerView.
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text_title.text = newsList[position].title
         holder.text_source.text = newsList[position].description
-        if(newsList[position].urlToImage!=null){
-            Picasso.get().Load
-        }
+        Picasso.get().load(newsList[position].urlToImaginto(holder.img_headline)
     }
-
     override fun getItemCount(): Int {
         return newsList.size
     }
