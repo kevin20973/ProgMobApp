@@ -14,11 +14,11 @@ interface API {
     @GET("api/getNewsByCategory")
     fun getDataByCategory(
         @Query("categories") category:String
-    ): Call<List<MyDataItem>>
+    ): Call<List<DataItem>>
 
     //gets news through the search bar
     @GET("api/getNewsBySearch")
     fun getDataBySearch(
         @Query("title") title:String
-    ): Call<List<MyDataItem>>
+    ): Call<List<DataItem>>
 }
