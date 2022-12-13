@@ -27,6 +27,9 @@ class Adapter(val context: Context, val newsList: List<DataItem>): RecyclerView.
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text_title.text = newsList[position].title
         holder.text_source.text = newsList[position].description
+        if(newsList[position].urlToImage!=null){
+            Picasso.get().Load
+        }
     }
 
     override fun getItemCount(): Int {
