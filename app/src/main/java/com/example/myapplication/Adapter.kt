@@ -14,8 +14,8 @@ class Adapter(val context: Context, val newsList: List<DataItem>): RecyclerView.
         var text_title: TextView
         var text_source: TextView
         init {
-            text_title = itemView.text_title
-            text_source = itemView.text_source
+            text_title = newsView.text_title
+            text_source = newsView.text_source
         }
     }
 

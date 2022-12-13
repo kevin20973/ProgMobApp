@@ -3,7 +3,9 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.Log.d
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,6 +24,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        recycler_main.setHasFixedSize(true)
+        linearLayoutManager = LinearLayoutManager(this)
+        recycler_main.layoutManager = linearLayoutManager
+
         getMyData()
     }
 
@@ -41,12 +48,13 @@ class MainActivity : AppCompatActivity() {
             ) {
                 val responseBody = response.body()!!
 
-
+                    Adapter = Adapter(baseContext, responseBody)
+                    Adapter.notifyDataSetChanged()
 
             }
 
             override fun onFailure(call: Call<List<DataItem>?>, t: Throwable) {
-
+                d("MainActivity", "onFailure" + t.message)
             }
         })
     }
