@@ -2,9 +2,23 @@ package com.example.myapplication
 
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface API {
 
+    //gets all news
     @GET(value = "api/GetNews")
     fun getData(): Call<List<DataItem>>
+
+    //gets news by category
+    @GET("api/getNewsByCategory")
+    fun getDataByCategory(
+        @Query("categories") category:String
+    ): Call<List<MyDataItem>>
+
+    //gets news through the search bar
+    @GET("api/getNewsBySearch")
+    fun getDataBySearch(
+        @Query("title") title:String
+    ): Call<List<MyDataItem>>
 }
