@@ -3,6 +3,7 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -14,6 +15,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 const val BASE_URL ="https://fa2097324277.azurewebsites.net/"
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var Adapter: Adapter
+    lateinit var  linearLayoutManager: LinearLayoutManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,13 +41,8 @@ class MainActivity : AppCompatActivity() {
             ) {
                 val responseBody = response.body()!!
 
-                val myStringBuilder = StringBuilder()
-                for (myData in responseBody){
-                    myStringBuilder.append(myData.title)
-                    myStringBuilder.append("\n")
 
-                }
-                enter_name.text = myStringBuilder
+
             }
 
             override fun onFailure(call: Call<List<DataItem>?>, t: Throwable) {
