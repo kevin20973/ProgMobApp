@@ -77,10 +77,11 @@ class MainActivity : AppCompatActivity() {
             .baseUrl(BASE_URL)
             .build()
             .create(API::class.java)
-
+        //vai buscar a data ao DataItem através do builder do retrofit
         val retrofitData = retrofitBuilder.getData()
 
         retrofitData.enqueue(object : Callback<List<DataItem>?> {
+            //função onResponse e onFailure geradas automaticamente quando gerado o objeto
             override fun onResponse(
                 call: Call<List<DataItem>?>,
                 response: Response<List<DataItem>?>

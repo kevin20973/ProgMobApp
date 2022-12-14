@@ -22,6 +22,7 @@ class Adapter(val context: Context, val newsList: List<DataItem>): RecyclerView.
            img_headline = newsView.img_headline
         }
     }
+    //3 funções geradas automaticamente quando introduzido os parametros na classe
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var newsView = LayoutInflater.from(context).inflate(R.layout.row_items, parent, false)
         return ViewHolder(newsView)
