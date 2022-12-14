@@ -15,6 +15,7 @@
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/btn_1"
+                android:backgroundTint="#6D6D6D"
                 android:text="Mundo"
                 android:textSize="12sp"
                 android:padding="6dp"
@@ -25,6 +26,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_2"
+                android:backgroundTint="#6D6D6D"
                 android:text="Ultimas"
                 android:textSize="12sp"
                 android:padding="6dp"
@@ -35,6 +37,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_3"
+                android:backgroundTint="#6D6D6D"
                 android:text="Desporto"
                 android:textSize="12sp"
                 android:padding="6dp"
@@ -45,6 +48,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_4"
+                android:backgroundTint="#6D6D6D"
                 android:text="Politica"
                 android:textSize="12sp"
                 android:padding="6dp"
@@ -55,6 +59,7 @@
             </Button>
             <Button
                 android:id="@+id/btn_5"
+                android:backgroundTint="#6D6D6D"
                 android:text="Economia"
                 android:textSize="12sp"
                 android:padding="6dp"
@@ -71,14 +76,7 @@
         app:cardElevation="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view"
-            app:defaultQueryHint="Search News..."
-            app:iconifiedByDefault="false"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
 
-        </androidx.appcompat.widget.SearchView>
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

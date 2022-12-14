@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        searchView = findViewById<SearchView>(R.id.search_view)
+     //   searchView = findViewById<SearchView>(R.id.search_view)
 
 
         recycler_main.setHasFixedSize(true)
@@ -57,17 +57,7 @@ class MainActivity : AppCompatActivity() {
             getMyDataByCategory("Economia")
 
         }
-        search_view.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                search_view.clearFocus()
-                getMyDataBySearch(query)
-                return false
-            }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                return false
-            }
-        })
 
     }
 
